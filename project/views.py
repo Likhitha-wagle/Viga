@@ -50,7 +50,7 @@ class ArchiveCreate(GenericAPIView):
 class ArchiveReplicate(GenericAPIView):
     authentication_classes = ()
     permission_classes = ()
-    def post(self,request,format="json"):
+    def post(self,request,file_name,format="json"):
         data = []
         with open('projectinfo.json') as f:
             for line in f:
